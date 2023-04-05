@@ -1,0 +1,120 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+/*blog post area start*/
+.blog-area {
+    .all-post-wrap{
+        margin-top: 30px;
+      @media #{$lg} {
+        gap: 30px;
+      }
+    }
+    .blog-post-img  {
+      width: 100%;
+    }
+  .blog-post-img img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .sub-title{
+    @media #{$lg} {
+      gap: 30px;
+    }
+  }
+
+
+  .wide-blog-post {
+    padding: 7px;
+    background: #f6f6f6;
+    border-radius: 5px;
+    box-shadow: 0 6px 15px #0000001a;
+  }
+
+  .post-title {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 10px;
+  }
+
+  .post-time {
+    color: #000;
+    margin-bottom: 15px;
+    i {
+      margin-right: 5px;
+    }
+  }
+
+  .blog-post-content {
+    padding: 20px 15px;
+  }
+
+  a.post-read-more-btn {
+    margin-top: 15px;
+    color: var(--clr-theme-primary);
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: var(--clr-theme-primary);
+        transition: .3s;
+    
+    }
+    &:hover{
+        &::before{width: 100%;}
+        
+    }
+  }
+
+  .blog-post-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @media #{$lg} {
+      gap: 30px;
+    }
+}
+  .single-post {
+    display: flex;
+    gap: 20px;
+    background: #f6f6f6;
+    box-shadow: 0 6px 15px #0000001a;
+    border-radius: 5px;
+    @media #{$xs} {
+      flex-direction: column;
+      gap: 15px;
+      border-radius: 0;
+    }
+    .single-post-img {
+      min-height: 100%;
+      width: 160px;
+      background: #f6f6f6;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+      @media #{$xs} {
+        width: 100%;
+      }
+    }
+
+    .single-post-content {
+      padding: 15px;
+      padding-left: 0;
+      width: calc(100% - 200px);
+      @media #{$xs} {
+        width: 100%;
+      }
+      .post-time {
+        margin-bottom: 8px;
+      }
+      .blog-area a.post-read-more-btn {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+/*blog post area end*/

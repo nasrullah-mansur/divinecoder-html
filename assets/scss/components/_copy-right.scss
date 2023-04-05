@@ -1,0 +1,22 @@
+/*copy right start*/
+.copy-right{
+    background: var(--clr-bg-dark);
+    padding: 15px 0;
+  p{
+    // @media #{$xs} {
+    //   // text-align: center;
+    // }
+  }
+     text-align: center;
+}
+
+  @media (max-width:576px) {
+    .copy-right{
+
+      text-align: center ;
+      p.text-start{
+        text-align: center !important;
+      }
+    }
+    }
+/*copy right end*/
